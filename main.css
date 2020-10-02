@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
   user-select: none;
   overflow-x: hidden;
-  background-color: black;
+  background-color: rgb(245, 245, 240);
 }
 
 a {
@@ -40,6 +40,7 @@ a {
   color: white;
   gap: 20px;
   font-family: "Noto Sans JP", sans-serif;
+  z-index: 200;
 }
 
 .modalMenu a {
@@ -60,7 +61,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   background-color: red;
-  padding: 0 5%;
+  padding: 0 40px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -106,10 +107,12 @@ a {
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 .home_content {
   display: flex;
@@ -180,9 +183,26 @@ a {
 }
 
 .gallery {
-  background-image: url(https://picsum.photos/seed/94/900);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container-gallery {
+  padding: 20px;
+  width: 100vw;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition-duration: 0.5s;
+  padding: 20px 40px !important;
+}
+.container-gallery img {
+  transition-duration: 0.5s;
+}
+.conainer-gallery img:hover {
+  border-radius: 200px;
 }
 
 .galicon {
@@ -254,12 +274,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   background-color: black;
   color: white;
   position: sticky;
   top: 10vh;
-  left: 0;
+  z-index: 80;
+  margin-bottom: auto;
+  font-size: 25px;
 }
 
 @keyframes bottomToTop {
