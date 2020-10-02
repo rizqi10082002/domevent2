@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  overflow-x: hidden;
+  user-select: none;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.modalMenu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.modalMenu a {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.modalMenu a:hover {
+  font-size: 3rem;
+  font-weight: 400;
+  color: darkred;
+}
+
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: red;
+  padding: 0 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-size: 2rem;
+  color: white;
+  font-weight: 200;
+}
+
+.menuIcons {
+  color: black;
+  font-size: 3rem;
+  margin-left: auto;
+}
+
+.menuIcons:hover {
+  color: white;
+}
+
+.closeIcons {
+  font-size: 2rem;
+  color: red;
+  position: fixed;
+  top: 20vh;
+  right: 10vw;
+}
+
+.closeIcons:hover {
+  font-size: 2rem;
+}
+
+.container section {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home {
+  background-color: white;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.home_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100vh;
+}
+
+.heroImage {
+  width: 350px;
+  height: 350px;
+  border-radius: 200px;
+  object-fit: cover;
+  opacity: 0;
+  object-position: top;
+  animation-name: bottomToTop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.herotext {
+  color: black;
+  font-size: 6rem;
+  opacity: 0;
+  font-family: "lobster" cursive;
+  animation-name: bottomToTop;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.about {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box1 box2"
+    "box3 box4";
+}
+.box {
+  padding: 20px;
+  border: 1px solid blue;
+}
+.about_box1 {
+  grid-template: box1;
+  background-image: url(https://picsum.photos/seed/67/600);
+  background-size: cover;
+  background-position: center;
+}
+.about_box2 {
+  grid-template: box2;
+}
+.about_box3 {
+  grid-template: box3;
+}
+.about_box4 {
+  grid-template: box4;
+  background-image: url(https://picsum.photos/seed/85/600);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact {
+  background-image: url(https://picsum.photos/seed/99/900);
+}
+
+.gallery {
+  background-image: url(https://picsum.photos/seed/94/900);
+  justify-content: center;
+  align-items: center;
+}
+
+.galicon {
+  font-size: 8rem;
+  color: red;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: infRotate;
+  animation-timing-function: linear;
+}
+
+.footer {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  padding: 0 10%;
+  color: white;
+  background-color: black;
+}
+
+.left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+}
+
+.col1,
+.col2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.formgroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.kirim {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 20%;
+}
+
+.aboutAlert {
+  width: 100vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: black;
+  color: white;
+  position: sticky;
+  top: 10vh;
+  left: 0;
+}
+
+@keyframes bottomToTop {
+  from {
+    transform: translateY(20vh);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes infRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

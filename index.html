@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <meta charset="UTF-8" />
+    <meta email="emailport" content="width=device-width, initial-scale=1.0" />
+    <meta email="emailription" content="dom event" />
+    <title>domevent</title>
+  </head>
+
+  <body>
+    <div class="modalMenu">
+      <span class="material-icons closeIcons" onclick="hideModal()">close</span>
+      <a href="#home" onclick="hideModal()">HOME</a>
+      <a href="#about" onclick="hideModal()">ABOUT</a>
+      <a href="#contact" onclick="hideModal()">CONTACT</a>
+      <a href="#gallery" onclick="hideModal()">GALLERY</a>
+    </div>
+    <nav class="navbar">
+      <h3 class="brand">ZL17</h3>
+      <span class="material-icons menuIcons" onclick="showModal()"> menu </span>
+    </nav>
+
+    <main class="container">
+      <section class="home" id="home">
+        <div class="aboutAlert">
+          Selamat Datang Di ZL17
+
+          <span class="material-icons alertClose" onclick="hideaboutAlert()">
+            close
+          </span>
+        </div>
+        <img
+          src="./ilya-ilford-PkrzCvapEtM-unsplash.jpg"
+          alt=""
+          class="heroImage"
+        />
+        <h1 class="herotext">
+          <span style="color: rgb(27, 70, 163)">Web</span>
+
+          PROFIL <br />
+          <span style="font-size: 12 rem">ZL17</span>
+        </h1>
+      </section>
+
+      <div class="about_box1 box">box1</div>
+      <div class="about_box2 box">box2</div>
+      <div class="about_box3 box">box3</div>
+      <div class="about_box4 box">box4</div>
+
+      <section class="gallery" id="gallery">
+        <span class="material-icons galicon"> motion_photos_paused </span>
+      </section>
+      <section class="contact" id="contact">contact</section>
+    </main>
+    <footer class="footer">
+      <div class="left">
+        <h3>Site map</h3>
+        <a href="home">home</a>
+        <a href="about">about</a>
+        <a href="gallery">gallery</a>
+        <a href="contact">contact</a>
+      </div>
+
+      <div class="right">
+        <div class="col1">
+          <div class="formgroup">
+            <label for="name">Name</label>
+            <input type="text" class="name" id="name" />
+          </div>
+
+          <div class="formgroup">
+            <label for="phone">Number Phone</label>
+            <input type="text" class="phone" id="number" />
+          </div>
+
+          <div class="formgroup">
+            <label for="email">email</label>
+            <input type="text" class="email" id="email" />
+          </div>
+        </div>
+        <div class="col2">
+          <div class="formgroup">
+            <label for="message">pesan</label>
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="formgroup">
+            <button class="kirim">kirim pesan</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
